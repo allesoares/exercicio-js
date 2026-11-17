@@ -45,7 +45,7 @@ function validarEmail(email) {
 //
 // Dica: utilize a propriedade "ativo" do objeto usuário
 function usuarioAtivo(usuario) {
-  return usuario.ativo
+  return usuario.ativo === true
 }
 
 // Esta função combina todas as validações do cadastro

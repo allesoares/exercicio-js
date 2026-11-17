@@ -31,9 +31,9 @@ As regras são:
 
 # Desafio
 
-No arquivo `usuario.js`, algumas funções estão incompletas.
+No arquivo `usuario.js`, as funções do desafio estão implementadas.
 
-Você deverá implementar as seguintes funções:
+As funções implementadas são:
 
 ## verificarMaiorIdade
 
@@ -80,3 +80,11 @@ Após implementar corretamente as funções, o resultado no console deve ser par
 Usuário 1 válido? true
 
 Usuário 2 válido? false
+
+## Solução do módulo 27
+
+- `verificarMaiorIdade(idade)` usa `idade >= 18`, incluindo quem tem exatamente 18 anos.
+- `usuarioAtivo(usuario)` usa `usuario.ativo === true`, retornando um booleano.
+- `validarCadastro(usuario)` combina maioridade, email válido e usuário ativo com `&&`.
+
+Para conferir os dois cenários fornecidos, execute `node usuario.js`.
