@@ -1,90 +1,40 @@
-# Exercício – Validação de Cadastro de Usuário (JavaScript)
+# Validação de cadastro com JavaScript
 
-## Objetivo
+Neste exercício do módulo 27, implementei funções para validar o cadastro de um usuário. Trabalhei com comparações, operadores lógicos e objetos; depois usei essas mesmas regras nos [testes de unidade com Jest do módulo 28](https://github.com/allesoares/modulo-28-jest).
 
-Neste exercício você irá praticar conceitos básicos de **JavaScript**, incluindo:
+## Regras do exercício
 
-- Tipos de dados
-- Variáveis
-- Operadores de comparação
-- Operadores lógicos
-- Funções
-- Manipulação de objetos
+O cadastro é válido quando as três condições são atendidas:
 
-O objetivo é implementar algumas funções que validam se um **cadastro de usuário é válido**.
+- O usuário tem 18 anos ou mais.
+- O e-mail contém `@`.
+- A propriedade `ativo` é exatamente o booleano `true`.
 
-Este código também será utilizado no **próximo módulo**, onde criaremos **testes automatizados com Jest**.
+A verificação de e-mail é propositalmente simples e se limita à regra do exercício.
 
----
+## Código
 
-# Cenário
+O arquivo [usuario.js](usuario.js) contém `verificarMaiorIdade`, `validarEmail`, `usuarioAtivo` e `validarCadastro`. A última função combina as três condições com `&&`.
 
-Um sistema possui um cadastro de usuários e precisa validar algumas regras antes de considerar o cadastro válido.
+## Como executar
 
-As regras são:
+Com Node.js instalado, execute na pasta do projeto:
 
-- O usuário deve ter **18 anos ou mais**
-- O email deve conter **"@"**
-- O usuário deve estar **ativo**
-
----
-
-# Desafio
-
-No arquivo `usuario.js`, as funções do desafio estão implementadas.
-
-As funções implementadas são:
-
-## verificarMaiorIdade
-
-Esta função deve retornar:
-
-- `true` se a idade for **maior ou igual a 18**
-- `false` caso contrário
-
----
-
-## usuarioAtivo
-
-Esta função deve verificar se o usuário está ativo.
-
-Ela deve retornar:
-
-- `true` se o usuário estiver ativo
-- `false` caso contrário
-
----
-## Como executar o exercício
-
-1. Abra o terminal
-
-2. Acesse a pasta do projeto
-
-
-cd nome-da-pasta-do-projeto
-
-
-3. Execute o arquivo JavaScript com Node.js
-
-
+```powershell
 node usuario.js
+```
 
+Os exemplos fornecidos mostram um cadastro válido e outro inválido:
 
----
-
-## Resultado esperado
-
-Após implementar corretamente as funções, o resultado no console deve ser parecido com este:
-
-
+```text
 Usuário 1 válido? true
-
 Usuário 2 válido? false
+```
 
-## Solução do módulo 27
+Este repositório contém o exercício de implementação. A suíte automatizada está no projeto do módulo 28.
 
-- `verificarMaiorIdade(idade)` usa `idade >= 18`, incluindo quem tem exatamente 18 anos.
-- `usuarioAtivo(usuario)` usa `usuario.ativo === true`, retornando um booleano.
-- `validarCadastro(usuario)` combina maioridade, email válido e usuário ativo com `&&`.
+## Contexto
 
-Para conferir os dois cenários fornecidos, execute `node usuario.js`.
+Exercício desenvolvido por Alexandre Soares durante o curso da EBAC, com a aplicação e os exemplos fornecidos nas aulas.
+
+[Voltar ao portfólio](https://github.com/allesoares/qa-portfolio)
